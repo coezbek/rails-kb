@@ -19,6 +19,8 @@ What options exist for css bundling in Rails 7.1?
 
 I always struggle to remember the options for collection_radio_group et al.
 
+Unfortunately there is no native support for enums in the Rails generators (see https://github.com/rails/rails/issues/21970)
+
 ```
     <!-- Enum field, Options shown inline in PicoCSS -->
     <fieldset>
