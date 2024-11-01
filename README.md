@@ -19,7 +19,11 @@ What options exist for css bundling in Rails 7.1?
 
 I always struggle to remember the options for collection_radio_group et al.
 
-Unfortunately there is no native support for enums in the Rails generators (see https://github.com/rails/rails/issues/21970)
+Unfortunately there is no native support for enums in the Rails generators (see https://github.com/rails/rails/issues/21970). 
+
+Things I learned / my best practices:
+ * In Controller/Views, Rails treats enums purely as text. All methods return and receive the text of the enum options. The integer option used for storing the result is just used towards the database.
+ * Enums are defined as positional arguments: `enum :enum_name, { enum_option1: 0, enum_option2: 1 }`
 
 ```
     <!-- Enum field, Options shown inline in PicoCSS -->
